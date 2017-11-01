@@ -15,7 +15,7 @@ An example of a Web API to Register new users.
 ## Automation
 
 To automate the deployment process, I decided to use **Travis-CI**, to build, test and deploy the application in production. 
-I opted by Heroku due to his simplicity to integrate with Github and Travis-CI.
+I opted by Heroku due to his simplicity to integrate with **Github** and **Travis-CI**.
 The deploy will be triggered after a commit into the **master** branch.
 
 ## Installation
