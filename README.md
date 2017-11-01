@@ -47,7 +47,7 @@ To access directly the online documentation, just click [here](http://website/sw
 
 ## Security
 
-To guarantee that only allowed users can access the API, we added a security layer. To get an authorization you need to authentiate before. To make simple, I decided to use just the **Basic Auth** authentication.
+To guarantee that only allowed users can access the API, we added a security layer. Therefore, to get an authorization you need to authenticate before. To make simple, I decided to use just the **Basic Auth** authentication.
 
 ```
 	Basic Auth: services:123456
