@@ -1,0 +1,10 @@
+languages:
+  Java: true
+
+engines:
+  checkstyle:
+    enabled: true
+
+ratings:
+  paths:
+  - "**.java"
