@@ -2,7 +2,7 @@
 
 An example of a Web API to Register new users.
 
-#### Technologies
+## Technologies
 - Gradle
 - JDK 1.8
 - Spring Boot
@@ -12,8 +12,9 @@ An example of a Web API to Register new users.
 - Travis-CI
 - Heroku
 
-### Installation
-#### Requirements
+## Installation
+
+### Requirements
 - JDK 1.8
 
 Executing the command below, it'll install all the project dependencies and build the package.
@@ -28,14 +29,14 @@ Executing the command below, it'll install all the project dependencies and buil
     java -jar build/libs/gs-registration-1.0-SNAPSHOT.jar
 ```
 
-### Documentation
+## Documentation
 
-## Local environment
+### Local environment
 ```
     http://localhost:8080/swagger-ui.html
 ```
 
-## Online
+### Online
 
 To access directly the online documentation, just click [here](http://website/swagger-ui.html).
 
@@ -43,9 +44,9 @@ To access directly the online documentation, just click [here](http://website/sw
 	http://<remote_host>/swagger-ui.html
 ```
 
-### Exploring the API
+## Exploring the API
 
-## Security
+### Security
 
 To guarantee that only allowed users can access the API, we added a security layer. Therefore, to get an authorization you need to authenticate before. To make simple, I decided to use just the **Basic Auth** authentication.
 
@@ -54,7 +55,7 @@ To guarantee that only allowed users can access the API, we added a security lay
 ```
 
 
-## Registring a new user
+### Registring a new user
 
 To register a new user, we need to be aware of a few constraints that we have to fulfill.
 
@@ -69,7 +70,7 @@ Constraints:
 	* The user shouldn't be on the blacklist record
 		* Obs: To validate if the user is not part of the blacklist, we check against his birth date and ssn.
 
-# Endpoint & payload
+### Endpoint & payload
 	```
 		[Local]
 		[POST] http://localhost:8080/api/v1/register
