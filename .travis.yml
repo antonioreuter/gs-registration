@@ -1,28 +1,23 @@
 language: java
 jdk: oraclejdk8
-
 branches:
   only:
   - master
-
 notifications:
   email:
-    - antonioreuter@gmail.com
-
+  - antonioreuter@gmail.com
 addons:
   code_climate:
     repo_token: 374effc68c1df27689bbd7fdea635e31bd282b31baeae9c96356ef2050652ce4
-
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
 
 deploy:
   provider: heroku
   api_key:
-    secure: WQCk/V1VI3tlMRGOKcZx07KZW1MnCsQAtyO4nJR2zezPF+LVg51buVIrdm7+2lrEQ3ai7l/PF0jhhZZfKIeCAmY51nGvESOsFZm4Ty/gzT4xOUyUF/SxHtBxd9JP2H1+GYC/9FJChkuc2eG11S/IEeBmhj0dV88Khj4tIM+zQWeh/qkaSpfCjIBwvZMAZppJtl4ZMlskl4edmN8HQrT9YlOuGQwWnvzFQ2EgI7Hr1kbxEODP21r8TjvhATpqWdxWD5VxLG4oATO28vLx0sFama+OmrN5IV8rIwg1c0iqIE/cKNf3sil5AQCgC0vinNA3veZ8DtQ+ccMZXq2w49/NZ61LmR8M1xkrHwGQh92wjg7cfejQaanwo4dDndokRHkWNvzdzA6bFBkNKY0jFv2iZyI6mS++YtWW+jR73Czl0yNE/RQEHNbsTQ1+8c7fhLqfwixETXKA7RDz8v0KAgjWYgt5GJHaItTZPf9Ef/yMNnJ5JIRVoYOQ0gBtrN3hd03NigaGIbtwr/l2CsFOC31jdcqEOdH44Y7tX4ZByenM9tVSZSIvkxkc4zf9yje/sniy2tBoC7JR/jttlJjXeoZYqh7BEE92vppG0r00NrPy+zszcOI3wyx12Pq+8rHIQeM1tEkRcl3Mc03YRun/pdhmIRtUGZQaRbi7Sziew81EL18=
-    strategy: git
+    secure: Xf2YDiLa3XK+zPnjNVajAT6SJUJ2Px4+TeaO24iYp4D/f3eTckU8Ur0HMFTZAydVb4ejcFNkCzW9B/SkXaf+R2kY6ghO7my7KoDefOP/W6zsC3jkpe68mxgIbV18OO6UAZGu+9Vg6OIpgEbJarNX+kdgA1filCeqwFWOthW59inUaW593WugFez/tcIpmtXQoY+qrZL99jKbdeYj2t3wAm2uVnEZ+wgxa8RE2BR9nCGlDECYFQUbhIw40aANKi1U0SWxutFhqfo4EYsEEc0Sr2hBrbORfrwRWrx8oJh2gYpsfhx5hRMzibafWPwmCMCSVy3ps8c/MGSuVWdRveiJjEMG2+37L/RSt6e49JpXkrOGp+kkUD1FfGP0wNEHxL5tXG59aaaZVVCV5PbeG9bSOIHTerK8tAhYqbMS0uO2KfM69J26qRooOZHns5Q1T1TcEVDsdps9seec9qf3zVs/AhxGWU0e6m6uIvGkciTSkPA+jrCsZvcNCYhbvSd9SIhOFsycBW6ClJ9KYLO7K/yqclwZAlSUEjVKQJlr3lq9pRQsnnWu54qQivwpR6EVbEPO+hSp0kY+33XrwR7SQ1SX7/eAgIaBMrH3UXyxRnlvGuNNt71+B0s75WhOoKWamfqgm7F+QKMJe+stbMIeHqSLat04vqk3HCT3ItE4AOzQS6A=
