@@ -23,15 +23,20 @@ public class ExclusionServiceImpl implements ExclusionService {
     @Cacheable(value = "blackList", key = "#birthDate + #ssn")
     @Override
     public boolean validate(String birthDate, String ssn) {
+        Instant dtBirthDate = convertDate(birthDate);
+
+        Optional<BlackList> optionalBlackList = blackListRepository.findBySocialSecurityNumberAndBirthDate(ssn, dtBirthDate);
+
+        return !optionalBlackList.isPresent();
+    }
+
+    private Instant convertDate(String birthDate) {
         try {
-            LocalDateTime localDateTime = LocalDateTime.parse(birthDate, DateTimeFormatter.ISO_DATE);
-            Instant dtBirthDate = localDateTime.toInstant(ZoneOffset.UTC);
-
-            Optional<BlackList> optionalBlackList = blackListRepository.findBySocialSecurityNumberAndBirthDate(ssn, dtBirthDate);
-
-            return !optionalBlackList.isPresent();
+            LocalDateTime localDateTime = LocalDateTime.parse(birthDate, DateTimeFormatter.ISO_DATE_TIME);
+            return localDateTime.toInstant(ZoneOffset.UTC);
         } catch (DateTimeParseException ex) {
             throw new IllegalArgumentException("The birth date need to be formatted in ISO 8601.");
         }
+
     }
 }

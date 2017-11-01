@@ -11,6 +11,7 @@ An example of a Web API to Register new users.
 - H2 (Database in memory)
 - Travis-CI
 - Heroku
+- CodeClimate
 
 ## Automation
 
@@ -44,10 +45,10 @@ Executing the command below, it'll install all the project dependencies and buil
 
 ### Online
 
-To access directly the online documentation, just click [here](http://website/swagger-ui.html).
+To access directly the online documentation, just click [here](https://gs-registration.herokuapp.com/swagger-ui.html).
 
 ```
-	http://<remote_host>/swagger-ui.html
+	https://gs-registration.herokuapp.com/swagger-ui.html
 ```
 
 ## Exploring the API
@@ -80,6 +81,9 @@ Constraints:
 	```
 		[Local]
 		[POST] http://localhost:8080/api/v1/register
+		
+		[Online]
+		[POST] https://gs-registration.herokuapp.com/api/v1/register
 
 		[Payload]
 		{

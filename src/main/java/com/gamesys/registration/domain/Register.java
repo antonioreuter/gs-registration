@@ -13,14 +13,16 @@ import java.time.Instant;
 
 @Entity
 @Data
+@Builder
 @EqualsAndHashCode(of = {"socialSecurityNumber", "birthDate"})
 @ToString(of = {"id", "username", "birthDate", "socialSecurityNumber"})
 @NoArgsConstructor
+@AllArgsConstructor
 public class Register implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     @Column(unique = true)
     @NotEmpty
